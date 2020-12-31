@@ -16,7 +16,7 @@ Installation
 
 Copy the *workstream.ini.dist* file to *workstream.ini*.
 
-Install the support to apply database migration:
+Install the support to apply database migrations:
 
 ```bash
  go get -tags 'postgres' -u github.com/golang-migrate/migrate/cmd/migrate
@@ -37,7 +37,7 @@ Install the binaries using the following command:
 Run
 ---
 
-Run the realm using:
+Run the realm:
 
 ```bash
  kusanagi realm start -c workstream.yaml -V workstream.ini -e default
