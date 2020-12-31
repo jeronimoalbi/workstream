@@ -1,0 +1,4 @@
+"@context": urn:kusanagi:gateway
+middleware:
+  - name: middleware
+    version: 1.*.*

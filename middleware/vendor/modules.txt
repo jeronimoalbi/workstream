@@ -1,0 +1,14 @@
+# github.com/kusanagi/kusanagi-sdk-go/v2 v2.0.0-20201223165305-d30bea566758
+## explicit
+github.com/kusanagi/kusanagi-sdk-go/v2
+github.com/kusanagi/kusanagi-sdk-go/v2/lib
+github.com/kusanagi/kusanagi-sdk-go/v2/lib/cli
+github.com/kusanagi/kusanagi-sdk-go/v2/lib/datatypes
+github.com/kusanagi/kusanagi-sdk-go/v2/lib/json
+github.com/kusanagi/kusanagi-sdk-go/v2/lib/log
+github.com/kusanagi/kusanagi-sdk-go/v2/lib/payload
+github.com/kusanagi/kusanagi-sdk-go/v2/lib/semver
+# github.com/pebbe/zmq4 v1.2.2
+github.com/pebbe/zmq4
+# github.com/ugorji/go/codec v1.1.7
+github.com/ugorji/go/codec

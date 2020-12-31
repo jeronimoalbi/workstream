@@ -1,0 +1,59 @@
+"@context": urn:kusanagi:service
+name: accounts
+version: 1.0.0
+http-gateway: false
+info:
+  title: Accounts
+  description: Manage accounts
+
+engine:
+  path: bin/accounts
+  # A tcp port is required for MacOS
+  tcp: 5602
+
+action:
+  - name: create
+    description: Creates a new account
+    http-method: post
+    http-input: form-data
+    param:
+    - name: name
+      required: true
+    - name: active
+      type: boolean
+
+  - name: read
+    description: Gets an account
+    http-method: get
+    http-path: /v1/accounts/{id}
+    param:
+    - name: id
+      http-input: path
+      required: true
+
+  - name: list
+    description: Get all accounts
+    http-method: get
+    collection: true
+
+  - name: update
+    description: Updates account attributes
+    http-method: patch
+    http-path: /v1/accounts/{id}
+    http-input: form-data
+    param:
+    - name: id
+      http-input: path
+      required: true
+    - name: name
+    - name: active
+      type: boolean
+
+  - name: delete
+    description: Deletes an account
+    http-method: delete
+    http-path: /v1/accounts/{id}
+    param:
+    - name: id
+      http-input: path
+      required: true

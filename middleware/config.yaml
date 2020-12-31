@@ -1,0 +1,13 @@
+"@context": urn:kusanagi:middleware
+name: middleware
+version: 1.0.0
+request: true
+response: true
+info:
+  title: Middleware
+  description: Resolves service, version and action
+
+engine:
+  path: bin/middleware
+  # A tcp port is required for MacOS
+  tcp: 5501

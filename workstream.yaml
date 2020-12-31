@@ -1,0 +1,32 @@
+"@context": "urn:kusanagi:realm"
+name: workstream
+version: 1.0.0
+env:
+  - name: default
+    discovery:
+      address: 127.0.0.1:4000
+      log-file: logs/discovery.log
+      log-level: error
+    gateway:
+      - server: {{ public-ip|127.0.0.1 }}:8080
+        config: gateway.yaml
+        address: 127.0.0.1:4010
+        log-file: logs/gateway.log
+        log-level: error
+    middleware:
+      - config: middleware/config.yaml
+        address: 127.0.0.1:4020
+        heartbeat: 10001
+        log-file: logs/middleware.log
+        log-level: debug
+        single-process: true
+        debug: true
+    service:
+      - config: service-accounts/config.yaml
+        address: 127.0.0.1:4031
+        heartbeat: 10002
+        log-file: logs/accounts.log
+        log-level: debug
+        bypass-validation: false
+        single-process: true
+        debug: true
